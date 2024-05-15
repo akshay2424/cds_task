@@ -58,9 +58,12 @@ def convert_dat_to_csv(dat_folder, output_folder):
             writer.writerow(['', 'Average Salary', '', '', '', average_salary, ''])
     except (ValueError, IndexError):
         print("Error calculating footer details.")
+    else:
+        print("Successfully added footer and data in result file.")
+
 
 # Example usage
-dat_folder = '/home/hp/Documents/CDS_Task'  # Replace 'input_folder' with your actual input folder path
-output_folder = '/home/hp/Documents/CDS_Task'  # Replace 'output_folder' with your desired output folder path
+dat_folder = '/home/hp/Documents/CDS_Task'
+output_folder = '/home/hp/Documents/CDS_Task'
 
 convert_dat_to_csv(dat_folder, output_folder)
